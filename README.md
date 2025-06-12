@@ -26,4 +26,4 @@
 ## Write ups
 
 ## Reports
-- <a href="https://github.com/Lucasvmarangoni/offsec-portfolio/blob/main/reports/hackers-do-bem-especialization-final-report.pdf">Hacker do bem - Red Team especialization: </a>
+- <a href="https://github.com/Lucasvmarangoni/offsec-portfolio/blob/main/reports/hackers-do-bem-especialization-final-report.pdf">Hacker do bem - Red Team especialization.</a>
