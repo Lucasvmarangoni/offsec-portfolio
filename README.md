@@ -11,7 +11,7 @@
 
 
 ### Active (Completed)
-- 🟡🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/650">Cypher</a> *(Medium, Linux)*  
+- 🟡🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/650">Cypher</a> 
   _Write-up will be published once the machine is retired._
 
 ### Retired (Completed)
