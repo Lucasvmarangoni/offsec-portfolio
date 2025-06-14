@@ -16,6 +16,7 @@
 
 ### Retired (Completed)
 
+- 🔴🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/625">Caption</a>
 - 🟢🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/547">TwoMillion</a>
 - 🟢🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/351">Cap</a>
 - 🟢🪟 <a href="https://www.hackthebox.com/achievement/machine/2088593/642">EscapeTwo</a>
