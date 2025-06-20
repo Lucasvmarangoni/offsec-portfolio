@@ -15,7 +15,7 @@
   _Write-up will be published once the machine is retired._
 
 ### Retired (Completed)
-
+- 🔴🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/592">FormulaX</a>
 - 🔴🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/625">Caption</a>
 - 🟢🪟 <a href="https://www.hackthebox.com/achievement/machine/2088593/642">EscapeTwo</a>
 - 🟡🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/162">RedCross</a>
@@ -32,7 +32,6 @@
 - 🟢🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/551">Sau</a>
 - 🟢🪟 <a href="https://www.hackthebox.com/achievement/machine/2088593/144">Jerry</a>
 - 🟢🐧 <a href="https://www.hackthebox.com/achievement/machine/2088593/351">Cap</a>
-
 
 ## Write-ups
 
