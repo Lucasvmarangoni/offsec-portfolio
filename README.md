@@ -41,4 +41,4 @@ _(To be added soon...)_
 
 ## Reports
 
-- <a href="https://github.com/Lucasvmarangoni/offsec-portfolio/blob/main/reports/hackers-do-bem-especialization-final-report.pdf">Hacker do Bem – Red Team Specialization (PDF)</a>
+- <a href="https://github.com/Lucasvmarangoni/offsec-portfolio/blob/main/reports/hackers-do-bem-especialization-final-report.pdf">Hackers do Bem – Red Team Specialization (PDF)</a>
