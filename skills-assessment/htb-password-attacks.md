@@ -1,7 +1,3 @@
-Claro! Aqui está a tradução para o inglês, mantendo o estilo e forma do texto original:
-
----
-
 The exercise provided the name Betty Jayde and her probable password 'Texas123!@#', along with the company name and the names and IPs of the machines that were in scope. It also stated that JUMP01, FILE01, and DC01 were on an internal network and were only accessible via DMZ01, the only machine accessible via the internet.
 
 First, I created a username wordlist using the tool 'Anarchy'.
