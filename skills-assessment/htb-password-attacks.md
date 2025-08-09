@@ -1,3 +1,6 @@
+# Skills Assessment - Password Attacks
+Refers to Hack The Box Academy <a href="https://academy.hackthebox.com/course/preview/password-attacks">Password Attacks</a> module, Skills Assessment exercise.
+
 The exercise provided the name Betty Jayde and her probable password 'Texas123!@#', along with the company name and the names and IPs of the machines that were in scope. It also stated that JUMP01, FILE01, and DC01 were on an internal network and were only accessible via DMZ01, the only machine accessible via the internet.
 
 First, I created a username wordlist using the tool 'Anarchy'.
