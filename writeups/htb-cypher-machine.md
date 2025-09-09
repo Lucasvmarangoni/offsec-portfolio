@@ -43,7 +43,6 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ---
 
 ### **Exploiting RCE**
-**Proof of Concept (SSRF):**  
 1. Hosted a Python web server:  
    ```bash
    python3 -m http.server 8000
