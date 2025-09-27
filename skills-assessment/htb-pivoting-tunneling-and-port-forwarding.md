@@ -380,7 +380,7 @@ PIVOTWIN10
 
 ### Initial checks
 
-**Open Ports**
+**Open Ports**  
 Internal port enumeration confirmed that this host did not have SSH.
 
 ```powershell
