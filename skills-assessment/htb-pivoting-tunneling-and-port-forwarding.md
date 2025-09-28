@@ -1,10 +1,13 @@
 # Pivoting, Tunneling, and Port Forwarding
 
+Refers to Hack The Box Academy <a href="https://academy.hackthebox.com/course/preview/pivoting-tunneling-and-port-forwarding">Pivoting, Tunneling, and Port Forwarding</a> module, Skills Assessment exercise.  
+<a href="https://academy.hackthebox.com/achievement/1501733/158 ">Certificate</a>
+
 The exercise provided a Web Shell in subdomain `support.inlanefreight.local`.
 
 **Final objective**: enumeration and pivoting until you reach the Inlanefreight Domain Controller and capture the associated flag.
 
-![][image15]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image15.png)
 
 
 ## Initial Access - Host: inlanefreight.local
@@ -133,12 +136,12 @@ Also, it was created a Python script to send ping (ICMP) using 25 parallel threa
 
 This script should be performed on the target machine (in this case, `inlanefreight.local` Host)
 
-![][image1]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image1.png)
 
 **Python script using TCP - assuming /16 subnet**  
 Another Python script was created, this one uses TCP. It is intended to be run from attacker's machine via SSH dynamic port forwarding using proxychains. The script sends TCP connections using `socket.create_connection()`. The script stops when it finds an open port on a host and then moves to the next one.
 
-![][image2]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image2.png)
 
 
 ### Port Enumeration
@@ -163,7 +166,7 @@ Probably the exercise awaiting that metasploit `auxiliary/scanner/rdp/rdp_scanne
 **Python script - TCP**
 Nonetheless, a new python script was created to perform port enumeration using `socket.create_connection`. Only essential ports were checked using this script.
 
-![][image3]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image3.png)
 
 
 ## PIVOT-SRV01
@@ -288,7 +291,7 @@ ssh -D 9050 mlefay@127.0.0.1 -p 2222
 
 The `mlefay` password was requested, this means the private key found in the `mlefay` directory on the `PIVOT-SRV01` host did not work, probably because the `authorized_keys` file is not present on the host.
 
-![][image4]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image4.png)
 
 
 ### Host Discovery
@@ -327,7 +330,7 @@ Nmap with proxychains did not work again.
 **Python script - TCP**   
 The previous script was adjusted and run on the `172.16.6.x` segment. The same two hosts found in the ARP table were discovered. 
 
-![][image5]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image5.png)
 
 ### Privilege escalation
 In one of the skill assessment questions was solicited discover the credentials of another vulnerable user, mentioned a previous pentests against Inlanefreight, in this case the Hint mentioned lsass file, the pentest mentioned is the 'Password attacks skills assessment'.
@@ -359,7 +362,8 @@ The previous Python script for TCP port scanning did not work through the ProxyJ
 
 A Powershell script was developed to search only for essential ports to access the hosts. On `172.16.6.25`, ports `445` and `3389` were open, on `172.16.6.45` only port `22` was open.
 
-![][image6] ![][image7]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image6.png) 
+![](images/htb-pivoting-tunneling-and-port-forwarding/image7.png)
 
                       172.16.6.25                      |                     172.16.6.45  
 
@@ -442,7 +446,7 @@ Ethernet adapter Ethernet1 2:
 
 There was an SMB network share of the Domain Controller, `AutomateDCAdmin (Z:)`, located on this host. The final flag was available on this share.
 
-![][image8]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image8.png)
 
 However, **this fact was ignored** and the exploitation did not stop here, continuing until to gain access on the Domain Controller host.
 
@@ -535,7 +539,7 @@ Interface: 172.16.6.25 --- 0x9
 **Python script - TCP**  
 The previous TCP host discovery script was performed through proxychains on the `172.16.10.x/24` segment, however, no new host were discovered. 
 
-![][image10]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image10.png)
 
 
 ### Privilege Escalation
@@ -586,7 +590,7 @@ PIVOTWIN10$:aes128-cts-hmac-sha1-96:f030c898d41be2abaa7a1f748558aeb3
 PIVOTWIN10$:des-cbc-md5:499d3754985101fb
 ```
 
-![][image11]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image11.png)
 
 A user named `cdrake` is presend on the NTDS dump, but this user is not present on the accessed hosts.
 
@@ -596,7 +600,7 @@ Because neither RDP nor SSH was available os this host, **evil-winrm** was used 
 
 Now, it was possible to obtain the flag without the convinience provided by the exercise. 
 
-![][image12]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image12.png)
 
 ### Initial Checks
 
@@ -669,16 +673,16 @@ Port 135 - 0.0.0.0
 Access to `172.16.6.45` still needed to be gained. 
 Only SSH port `22` was open, so it was likely a Linux machine. The attempts was made using three SSH private keys, found in the `mlefay` directories on `PIVOT-SRV01` and `PIVOTWIN10`, and the `vfrank` directory on `PIVOTWIN10`. The `vfrank` `known_hosts` file included an entry for `172.16.6.45`.
 
-![][image9]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image9.png)
 
 The previously found passwords for both users also did not work. LSASS dump was performed on all Windows hosts. 
 The hashs obtained from **NTDS** and **LSASS** also correspond to the previously found passwords, and the hash of the other users, such as `webadmin`, `mlefay`, `Administrator` and `cdrake` could not be cracke using **hashcat** -m 1000. 
 
-![][image13]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image13.png)
 
 The **Registry hives** adumps were also performed to obtain additional user hashes, providing new passwords to try on `172.16.6.45` SSH. However, the hashes are the same.
 
-![][image14]
+![](images/htb-pivoting-tunneling-and-port-forwarding/image14.png)
 
 ```bash
 lucas@hacking:~/workspace/academy/Skills-Assessment-Pivoting-Tunneling-Port-Forwarding/PIVOT-SRV01$ secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
@@ -758,39 +762,19 @@ The hash for `vfrank`, who is also a user on this host, was not provided, as it 
 
 The final attempt searched for credentials in files. It were used a `LaZagne` and `cmd` commands, but nothing was found.
 
-![][image16] ![][image17]
-
-
+![](images/htb-pivoting-tunneling-and-port-forwarding/image16.png) 
+![](images/htb-pivoting-tunneling-and-port-forwarding/image17.png)
 
 ## MY NOTES 
 
 I use my own app to record useful data during my "pentests".  https://lucasvmarangoni.github.io/notes/ 
 
-![][image18] ![][image19] ![][image20] ![][image21]
+If you want to import my notes into the app: https://github.com/Lucasvmarangoni/notes/blob/main/example.json
+
+![](images/htb-pivoting-tunneling-and-port-forwarding/image18.png)
+![](images/htb-pivoting-tunneling-and-port-forwarding/image19.png)
+![](images/htb-pivoting-tunneling-and-port-forwarding/image20.png) 
+![](images/htb-pivoting-tunneling-and-port-forwarding/image21.png)
 
 
-
-
-
-[image21]: images/htb-pivoting-tunneling-and-port-forwarding/image21.png
-[image20]: images/htb-pivoting-tunneling-and-port-forwarding/image20.png
-[image19]: images/htb-pivoting-tunneling-and-port-forwarding/image19.png
-[image18]: images/htb-pivoting-tunneling-and-port-forwarding/image18.png
-[image17]: images/htb-pivoting-tunneling-and-port-forwarding/image17.png
-[image16]: images/htb-pivoting-tunneling-and-port-forwarding/image16.png
-[image15]: images/htb-pivoting-tunneling-and-port-forwarding/image15.png
-[image14]: images/htb-pivoting-tunneling-and-port-forwarding/image14.png
-[image13]: images/htb-pivoting-tunneling-and-port-forwarding/image13.png
-[image12]: images/htb-pivoting-tunneling-and-port-forwarding/image12.png
-[image11]: images/htb-pivoting-tunneling-and-port-forwarding/image11.png
-[image10]: images/htb-pivoting-tunneling-and-port-forwarding/image10.png
-[image9]: images/htb-pivoting-tunneling-and-port-forwarding/image9.png
-[image8]: images/htb-pivoting-tunneling-and-port-forwarding/image8.png
-[image7]: images/htb-pivoting-tunneling-and-port-forwarding/image7.png
-[image6]: images/htb-pivoting-tunneling-and-port-forwarding/image6.png
-[image5]: images/htb-pivoting-tunneling-and-port-forwarding/image5.png
-[image4]: images/htb-pivoting-tunneling-and-port-forwarding/image4.png
-[image3]: images/htb-pivoting-tunneling-and-port-forwarding/image3.png
-[image2]: images/htb-pivoting-tunneling-and-port-forwarding/image2.png
-[image1]: images/htb-pivoting-tunneling-and-port-forwarding/image1.png
 
