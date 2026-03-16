@@ -368,9 +368,9 @@
 
     <br>
 
-    ```
-    I do not have much experience with PHP, however, I have previously exploited vulnerabilities involving PHP wrappers on other machines. At this point, I wondered whether it was possible to concatenate multiples wrappers.
-    ```
+    
+    > I do not have much experience with PHP, however, I have previously exploited vulnerabilities involving PHP wrappers on other machines. At this point, I wondered whether it was possible to concatenate multiples wrappers.
+        
 
 ### Chains php wrappers
 
@@ -380,7 +380,7 @@
 
     This article was found: https://medium.com/@lashin0x/local-file-inclusion-to-remote-code-execution-rce-bea0ec06342a
     
-        “To automate this process, a tool like PHP Filter Chain Generator can be employed. The tool is designed to automate the creation of filter chains, which can transform harmless strings into malicious payloads. In essence, this works by tricking the PHP interpreter into processing and executing malicious payload as if it were a regular” Mostafa Lashin, Nov 6, 2024
+    > “To automate this process, a tool like PHP Filter Chain Generator can be employed. The tool is designed to automate the creation of filter chains, which can transform harmless strings into malicious payloads. In essence, this works by tricking the PHP interpreter into processing and executing malicious payload as if it were a regular” Mostafa Lashin, Nov 6, 2024
 
     The article author recommends a python tool.
 
@@ -496,7 +496,6 @@
         8623e713bb98ba2d46f335d659958ee658eb6370bc4c9ee4ba1cc6f37f97a10e:8Sb)tM1vs1SS
         c7ea20ae5d78ab74650c7fb7628c4b44b1e7226c31859d503b93379ba7a0d1c2:8Sb)tM1vs1SS
 
-    Command
     ```bash
     hashcat -m 1410 --username hashes /home/lucas/workspace/wordlists/rockyou.txt
     ```
