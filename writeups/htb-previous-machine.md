@@ -1,4 +1,9 @@
+<div align=center>
+
 # Previous Machine Write-up
+
+[HTB Machine Certificate](https://labs.hackthebox.com/achievement/machine/2088593/701)
+</div>
 
 ## Reconnaissance
 

@@ -1,4 +1,11 @@
+<div align="center">
+
 # Era Machine Write-up
+
+[HTB Machine Certificate](https://labs.hackthebox.com/achievement/machine/2088593/683)
+
+</div>
+
 
 ## Reconnaissance
 
@@ -370,8 +377,3 @@
     [image1]: files/htb-era-machine/image1.png
 
 
-<div align="center">
-
-## <a href=”https://labs.hackthebox.com/achievement/machine/2088593/683”>Machine Certificate<a>
-
-</div>

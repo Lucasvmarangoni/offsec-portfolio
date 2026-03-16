@@ -1,4 +1,10 @@
+<div align=center>
+
 # Cypher Machine Write-up
+
+[HTB Machine Certificate](https://labs.hackthebox.com/achievement/machine/2088593/650)
+</div>
+
 
 ### **Initial Reconnaissance**
 Started with an `nmap` scan to identify open ports and services:  
@@ -173,4 +179,3 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 ---
 
-**Completion**: [HTB Machine Certificate](https://www.hackthebox.com/achievement/machine/2088593/650)

@@ -1,4 +1,10 @@
+<div align=center>
+
 # Imagery Machine Write-up
+
+[HTB Machine Certificate](https://labs.hackthebox.com/achievement/machine/2088593/751)
+</div>
+
 
 ## Reconnaissance
 
@@ -487,6 +493,5 @@
 You can see my [notes](files/htb-Imagery-machine/notes.json) to this machine importing them in my app `notes` https://lucasvmarangoni.github.io/notes/.
 
 
-## <a href="https://labs.hackthebox.com/achievement/machine/2088593/751">Certificate</a>
 
 

@@ -1,4 +1,11 @@
+<div align="center">
+
 # CodePartTwo Machine Write-up
+
+<[HTB Machine Certificate](https://labs.hackthebox.com/achievement/machine/2088593/692)
+
+</div>
+
 
 ## Reconnaissance
 
@@ -294,11 +301,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
     id
     uid=0(root) gid=0(root) groups=0(root)
     ```
-<div align="center">
 
-## <a href=”https://labs.hackthebox.com/achievement/machine/2088593/692”>HTB Machine Certificate<a>
-
-</div>
 
 
 

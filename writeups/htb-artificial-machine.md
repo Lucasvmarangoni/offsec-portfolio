@@ -1,4 +1,11 @@
+
+<div align="center">
+
 # Artificial Machine Write-up
+
+[HTB Machine Certificate](https://labs.hackthebox.com/achievement/machine/2088593/668)
+
+</div>
 
 ## Reconnaissance
 
@@ -181,8 +188,4 @@
 
     [image3]: files/htb-artificial-machine/image3.png
 
-<div align="center">
 
-## <a href=”https://labs.hackthebox.com/achievement/machine/2088593/668”>HTB Machine Certificate<a>
-
-</div>

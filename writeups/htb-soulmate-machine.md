@@ -2,6 +2,8 @@
 
 # Soulmate Machine Write-up
 
+[HTB Machine Certificate](https://labs.hackthebox.com/achievement/machine/2088593/721)
+
 </div>
 
 # Reconnaissance

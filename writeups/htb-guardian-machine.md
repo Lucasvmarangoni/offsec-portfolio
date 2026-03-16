@@ -1,7 +1,9 @@
 
 <div align=center>
 
-# *Guardian Machine Write-up*
+# Guardian Machine Write-up
+
+[HTB Machine Certificate](https://labs.hackthebox.com/achievement/machine/2088593/703)
 
 </div>
 
@@ -745,11 +747,7 @@
 
     ![][image11]
     
-<div align="center">
 
-## <a href=”https://labs.hackthebox.com/achievement/machine/2088593/703”>HTB Machine Certificate<a>
-
-</div>
 
 [image11]: files/htb-guardian-machine/image11.png
 [image10]: files/htb-guardian-machine/image10.png
