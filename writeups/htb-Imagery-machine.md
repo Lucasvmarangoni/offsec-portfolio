@@ -30,7 +30,7 @@
     * Jane Doe, Photographer
     * John Smith, Hobbyist
 
-3. **Application tecnilogies - Wappalyzer**  
+3. **Application technologies - Wappalyzer**  
     * Flask 3.1.3  
     * Python 3.12.7
 
